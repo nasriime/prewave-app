@@ -86,30 +86,41 @@
 | `label`    | string   | Button text                                 | 'Button'  |
 
 ## Visual Spec
+
+**Primary Button Sizes**
+```text
 ┌──────────────────────────────────────┐
 │              PRIMARY                 │                
 ├───────────┬───────────┬──────────────┤
 │   Small   │  Medium   │     Large    │
 └───────────┴───────────┴──────────────┘
+```
 
-States:
+**States**
+```text
 [ Normal ] [ Hover ] [ Active ] [ Focus ] [ Disabled ]
+```
 
-Variants:
+**Variants**
+```text
 ┌───────────┐ ┌───────────┐ ┌───────────┐
 │   Primary │ │ Secondary │ │ Tertiary  │
 └───────────┘ └───────────┘ └───────────┘
+```
 
-With Icons:
+**With Icons**
+```text
 ┌───────────────────┐ ┌───────────────────┐
 │   ← Icon + Text   │ │   Text + Icon →   │
 └───────────────────┘ └───────────────────┘
+```
 
-Loading State:
+**Loading State**
+```text
 ┌───────────────────┐
 │ [spinner] Loading │
 └───────────────────┘
-
+```
 
 ## Implementation Notes
 
