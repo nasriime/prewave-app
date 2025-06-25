@@ -1,0 +1,61 @@
+<!-- see button.component.md for more info -->
+<!-- link mode -->
+@if (href) {
+<a [href]="disabledSignal() || loadingSignal() ? null : href" [target]="target"
+  [attr.aria-disabled]="disabledSignal() || loadingSignal()" [attr.aria-busy]="loadingSignal()"
+  [tabindex]="computedTabIndex" role="link" (click)="onClick($event)" (keydown)="onKeyDown($event)" class="button"
+  [class]="{
+      'variant-primary': variant === 'primary',
+      'variant-secondary': variant === 'secondary',
+      'variant-tertiary': variant === 'tertiary',
+      'size-small': size === 'small',
+      'size-medium': size === 'medium',
+      'size-large': size === 'large',
+      'disabled': disabledSignal(),
+      'loading': loadingSignal()
+    }">
+  <span class="content">
+    @if (iconLeft) {
+    <mat-icon class="icon-left">{{ iconLeft }}</mat-icon>
+    }
+    @if (label) {
+    <span class="label">{{ label }}</span>
+    }
+    @if (iconRight) {
+    <mat-icon class="icon-right">{{ iconRight }}</mat-icon>
+    }
+    @if (loadingSignal()) {
+    <mat-icon class="spinner">cyclone</mat-icon>
+    }
+  </span>
+</a>
+} @else {
+<!-- button mode -->
+<button [type]="type" [attr.aria-disabled]="disabledSignal() || loadingSignal()" [attr.aria-busy]="loadingSignal()"
+  [tabindex]="computedTabIndex" role="button" (click)="onClick($event)" (keydown)="onKeyDown($event)" class="button"
+  [class]="{
+      'variant-primary': variant === 'primary',
+      'variant-secondary': variant === 'secondary',
+      'variant-tertiary': variant === 'tertiary',
+      'size-small': size === 'small',
+      'size-medium': size === 'medium',
+      'size-large': size === 'large',
+      'disabled': disabledSignal(),
+      'loading': loadingSignal()
+    }">
+  <span class="content">
+    @if (iconLeft) {
+    <mat-icon fontSet="material-icons" class="icon-left">{{ iconLeft }}</mat-icon>
+    }
+    @if (label) {
+    <span class="label">{{ label }}</span>
+    }
+    @if (iconRight) {
+    <mat-icon fontSet="material-icons" class="icon-right">{{ iconRight }}</mat-icon>
+    }
+    @if (loadingSignal()) {
+    <mat-icon fontSet="material-icons" class="spinner">autorenew</mat-icon>
+    }
+  </span>
+</button>
+}

@@ -1,59 +1,107 @@
-# PrewaveApp
+# Angular Material Button Component
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+## Features
 
-## Development server
+- 🎨 **Multiple Variants**: Primary, Secondary, and Tertiary styles
+- 📏 **Responsive Sizes**: Small, Medium, and Large options
+- 🔄 **Loading State**: Built-in spinner with smooth animation
+- ♿ **Accessibility**: Full ARIA support and keyboard navigation
+- 🖼️ **Icon Support**: Left/right icons with proper spacing
+- 🔗 **Dual Mode**: Works as both button (`<button>`) and link (`<a>`)
+- 🚫 **Disabled State**: Visual and functional disabled mode
+- 🧪 **Tested**: Comprehensive unit test coverage
+- 📖 **Documented**: Storybook stories for all variations
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Installation and Setup
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
 
-## Code scaffolding
+- Node.js 18+
+- npm 9+
+- Angular CLI 19+
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Install Dependencies
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📘 Command Reference
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+| Command                   | Description                          |
+|---------------------------|--------------------------------------|
+| `npm start`               | Starts Angular development server    |
+| `npm test`                | Runs all unit tests                  |
+| `npm run storybook`       | Launches Storybook UI                |
+| `npm run build`           | Creates production build             |
+| `npm run build-storybook` | Generates static Storybook site      |
 
-```bash
-ng test
+---
+
+## Button Component
+
+A versatile, accessible button component with multiple variants, sizes, and states. Built with Angular and Material Design principles.
+
+---
+
+## Overview
+
+This button component provides:
+
+- ✅ Three visual variants (primary, secondary, tertiary)
+- 📐 Three size options (small, medium, large)
+- 🖼 Icon support (left/right)
+- ⏳ Loading and disabled states
+- 🔗 Dual functionality as button or link
+- ♿ Full accessibility support
+
+Built with:
+
+- Angular Signals for reactive state management
+- Material Design principles
+- WCAG accessibility standards
+- Flexible styling system
+
+---
+
+## API
+
+### Inputs
+
+| Property     | Type                                 | Default     | Description                          |
+|--------------|--------------------------------------|-------------|--------------------------------------|
+| `variant`    | `'primary' | 'secondary' | 'tertiary'` | `'primary'` | Visual style variant                 |
+| `size`       | `'small' | 'medium' | 'large'`       | `'medium'`  | Size of the button                   |
+| `iconLeft`   | `string`                              | `undefined` | Material icon name for left icon    |
+| `iconRight`  | `string`                              | `undefined` | Material icon name for right icon   |
+| `label`      | `string`                              | `''`        | Button text                          |
+| `href`       | `string`                              | `undefined` | If provided, renders as `<a>` tag    |
+| `target`     | `string`                              | `'_self'`   | Link target when `href` is used     |
+| `type`       | `'button' | 'submit' | 'reset'`       | `'button'`  | HTML button type attribute           |
+| `loading`    | `boolean`                             | `false`     | Shows loading spinner                |
+| `disabled`   | `boolean`                             | `false`     | Disables interaction                 |
+
+### Outputs
+
+| Event     | Description               |
+|-----------|---------------------------|
+| `clicked` | Emits native click event  |
+
+---
+
+## Usage
+
+### As a Button (default)
+
+```html
+<app-button 
+  variant="primary"
+  size="medium"
+  (clicked)="handleClick($event)"
+  label="Click me"
+></app-button>
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
