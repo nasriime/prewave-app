@@ -71,6 +71,20 @@
 - Visible focus indicator  
 - Programmatic focus handling  
 
+## Props
+
+| Prop       | Type     | Description                                 | Default   |
+|------------|----------|---------------------------------------------|-----------|
+| `variant`  | string   | Button style: 'primary', 'secondary', 'tertiary' | 'primary' |
+| `size`     | string   | Button size: 'small', 'medium', 'large'     | 'medium'  |
+| `iconLeft` | string   | Material icon name for left icon            | -         |
+| `iconRight`| string   | Material icon name for right icon           | -         |
+| `loading`  | boolean  | Shows loading spinner                       | false     |
+| `disabled` | boolean  | Disables the button                         | false     |
+| `href`     | string   | Renders as a link if provided               | -         |
+| `target`   | string   | Link target (used with `href`)              | -         |
+| `label`    | string   | Button text                                 | 'Button'  |
+
 ## Visual Spec
 ┌──────────────────────────────────────┐
 │              PRIMARY                 │                

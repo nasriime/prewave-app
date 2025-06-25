@@ -48,6 +48,10 @@ A versatile, accessible button component with multiple variants, sizes, and stat
 
 ---
 
+For detailed design and implementation notes, see [Button Component Design Documentation](src/app/components/button/button.component.md)
+
+---
+
 ## Overview
 
 This button component provides:
@@ -76,20 +80,21 @@ Built with:
 |--------------|--------------------------------------|-------------|--------------------------------------|
 | `variant`    | `'primary' | 'secondary' | 'tertiary'` | `'primary'` | Visual style variant                 |
 | `size`       | `'small' | 'medium' | 'large'`       | `'medium'`  | Size of the button                   |
-| `iconLeft`   | `string`                              | `undefined` | Material icon name for left icon    |
-| `iconRight`  | `string`                              | `undefined` | Material icon name for right icon   |
-| `label`      | `string`                              | `''`        | Button text                          |
+| `iconLeft`   | `string`                              | `undefined` | Material icon name for left icon     |
+| `iconRight`  | `string`                              | `undefined` | Material icon name for right icon    |
+| `label`      | `string`                              | `'Button'`  | Button text                          |
 | `href`       | `string`                              | `undefined` | If provided, renders as `<a>` tag    |
-| `target`     | `string`                              | `'_self'`   | Link target when `href` is used     |
-| `type`       | `'button' | 'submit' | 'reset'`       | `'button'`  | HTML button type attribute           |
+| `target`     | `string`                              | `undefined` | Link target when `href` is used      |
 | `loading`    | `boolean`                             | `false`     | Shows loading spinner                |
 | `disabled`   | `boolean`                             | `false`     | Disables interaction                 |
+
+*Note: `iconLeft` and `iconRight` expect Material icon names.*
 
 ### Outputs
 
 | Event     | Description               |
 |-----------|---------------------------|
-| `clicked` | Emits native click event  |
+| `clicked` | Emits native click event (also triggered by Enter/Space for accessibility)  |
 
 ---
 

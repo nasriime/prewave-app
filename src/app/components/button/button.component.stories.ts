@@ -51,6 +51,22 @@ const meta: Meta<ButtonComponent> = {
     clicked: { 
       action: 'clicked',
       description: 'Event emitted when button is clicked'
+    },
+    label: {
+      control: 'text',
+      description: 'Button text label'
+    },
+    loading: {
+      control: 'boolean',
+      description: 'Shows a loading spinner when true'
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Disables the button when true'
+    },
+    target: {
+      control: 'text',
+      description: 'Specifies where to open the linked document (used with href)'
     }
   },
   args: {
